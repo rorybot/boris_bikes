@@ -12,7 +12,7 @@ class DockingStation
 
   def release_bike
     fail 'No bikes available' if empty?
-    @bikes[rand]
+    @bikes.pop
   end
 
   def dock(bike)
@@ -23,6 +23,8 @@ class DockingStation
   def bike
     @bikes
   end
+
+
 
   private
 
